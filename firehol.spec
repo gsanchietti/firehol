@@ -16,8 +16,9 @@ BuildArch:      noarch
 BuildRequires:  iproute
 BuildRequires:  ipset
 BuildRequires:  iptables
-BuildRequires:  iptables-ipv6
+BuildRequires:  iptables-services
 BuildRequires:  tcpdump
+BuildRequires:  iproute-tc
 %if 0%{?rhel} > 0 && 0%{?rhel} < 7
 %else
 BuildRequires:  systemd
@@ -29,11 +30,12 @@ Requires:       gzip
 Requires:       ipset
 Requires:       iproute
 Requires:       iptables
-Requires:       iptables-ipv6
+Requires:       iptables-services
 Requires:       less
 Requires:       sed
 Requires:       util-linux
 Requires:       tcpdump
+Requires:       iproute-tc
 %if 0%{?rhel} > 0 && 0%{?rhel} < 7
 Requires:       module-init-tools
 %else
